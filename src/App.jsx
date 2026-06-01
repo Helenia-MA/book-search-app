@@ -58,8 +58,26 @@ function SearchForm() {
 
         <input type="text" placeholder="enter author name (optional)"
                value={author} onChange={(e) => setAuthor(e.target.value)} />
-        <button type="submit">Search</button>
+        <button type="submit" disabled={loading}>
+          {loading} ? 'Searching...': 'Search'}
+        </button>
     </form>
+    
+    {/*adding book dominos for loading */}
+    {loading && (
+      <div className="loading">
+        <div className="book-domino">
+          <div className="book b1">📚</div>
+          <div className="book b2">📖</div>
+          <div className="book b3">📚</div>
+          <div className="book b4">📖</div>
+          <div className="book b5">📚</div>
+        </div>
+        <p>Fetching books, this may take a moment...</p>
+      </div>
+    )}
+
+    {error && <p className="error">{error}</p>
 
     <section className="results">
       {results.map((book, index) => (
