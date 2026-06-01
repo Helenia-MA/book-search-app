@@ -9,7 +9,7 @@ https://book-search-app-static.onrender.com
 - **Backend:** Flask, Python
 - **APIs:** Google Books API, Open Library API
 
-## Running Locally
+## Running it locally
 
 **Backend**
 ```bash
