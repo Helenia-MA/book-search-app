@@ -1,14 +1,11 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from './assets/vite.svg'
-import heroImg from './assets/hero.png'
+import bookImg from './assets/library-icon.jpg'
 import './App.css'
 
 function Header() {
-  const book_img = "src/assets/library-icon.jpg"
   return (
     <header className="heading">
-      <img id="book-icon" src={book_img} width="60px" alt="Book Icon" />
+      <img id="book-icon" src={bookImg} width="60px" alt="Book Icon" />
       <h1> Book Search Aggregator</h1>
     </header>
   );
