@@ -37,11 +37,13 @@
 
 .sub-header h2 {
   margin-bottom: 0.5rem;
+  padding: 0 2rem;
 }
 
 .sub-header p {
   margin-top: 0;
   line-height: 1.6;
+  padding: 0 2rem;
 }
 
 /* search form */
