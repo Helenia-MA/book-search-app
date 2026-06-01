@@ -182,3 +182,40 @@
     border-right-color: var(--border);
   }
 }
+
+.loading {
+  text-align: center;
+  padding: 2rem;
+  color: #666;
+}
+
+.loading p {
+  margin-top: 1rem;
+  font-size: 14px;
+}
+
+.book-domino {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  gap: 6px;
+  height: 60px;
+}
+
+.book {
+  font-size: 28px;
+  animation: domino 1.2s ease-in-out infinite;
+  transform-origin: bottom center;
+}
+
+.b1 { animation-delay: 0s; }
+.b2 { animation-delay: 0.15s; }
+.b3 { animation-delay: 0.3s; }
+.b4 { animation-delay: 0.45s; }
+.b5 { animation-delay: 0.6s; }
+
+@keyframes domino {
+  0%, 60%, 100% { transform: rotate(0deg); }
+  20%            { transform: rotate(-30deg); }
+  40%            { transform: rotate(10deg); }
+}
