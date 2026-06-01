@@ -28,6 +28,8 @@ function SearchForm() {
 
   async function handleSubmit(e) {
     e.preventDefault()
+    setLoading(true)
+    setError(null)
     try{
       const response = await fetch(
         `${API_URL}/api/search?title=${encodeURIComponent(title)}&author=${encodeURIComponent(author)}`
@@ -42,6 +44,9 @@ function SearchForm() {
 
     } catch (error) {
       console.error("Error fetching book data:", error)
+      setError("Sorry, Smething went wrong")
+    } finally {
+      setLoading(false)
     }
   }
 
