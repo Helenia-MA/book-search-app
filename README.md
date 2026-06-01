@@ -1,16 +1,35 @@
-# React + Vite
+# 📚 Book Search Aggregator
+I've developed a web app that searches multiple book databases at once, bringing together results from **Google Books** and **Open Library** in one place in order to increase efficiency when looking up books without having to manually sift through multiple sites.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Live Demo
+https://book-search-app-static.onrender.com
 
-Currently, two official plugins are available:
+## Tech Stack
+- **Frontend:** React, Vite
+- **Backend:** Flask, Python
+- **APIs:** Google Books API, Open Library API
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Running Locally
 
-## React Compiler
+**Backend**
+```bash
+cd public/backend
+pip install flask flask-cors requests gunicorn
+python app.py
+```
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+**Frontend**
+```bash
+npm install
+npm run dev
+```
 
-## Expanding the ESLint configuration
+Then open http://localhost:5174/ 
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Features
+- Search by title or title + author
+- Results from multiple sources in one view
+- Caches repeated searches to avoid API rate limits
+- Links to full book info for each result
+
+<img width="1470" height="956" alt="Screenshot 2026-05-31 at 10 39 00 PM" src="https://github.com/user-attachments/assets/1fe6d762-17d3-4b23-a903-8986d46483e9" />
