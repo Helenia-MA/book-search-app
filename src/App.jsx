@@ -24,6 +24,8 @@ function SearchForm() {
   const [title, setTitle] = useState("")
   const [author, setAuthor] = useState("")
   const [results, setResults] = useState([])
+  const [loading, setLoading] = useState(false)
+  const [error, setError] = useState(null)
   const API_URL =  import.meta.env.VITE_API_URL || "http://127.0.0.1:5000"
 
   async function handleSubmit(e) {
@@ -44,7 +46,7 @@ function SearchForm() {
 
     } catch (error) {
       console.error("Error fetching book data:", error)
-      setError("Sorry, Smething went wrong")
+      setError("Sorry, Something went wrong")
     } finally {
       setLoading(false)
     }
@@ -59,10 +61,10 @@ function SearchForm() {
         <input type="text" placeholder="enter author name (optional)"
                value={author} onChange={(e) => setAuthor(e.target.value)} />
         <button type="submit" disabled={loading}>
-          {loading} ? 'Searching...': 'Search'}
+          {loading ? 'Searching...' : 'Search'}
         </button>
     </form>
-    
+
     {/*adding book dominos for loading */}
     {loading && (
       <div className="loading">
@@ -77,7 +79,7 @@ function SearchForm() {
       </div>
     )}
 
-    {error && <p className="error">{error}</p>
+    {error && <p className="error">{error}</p>}
 
     <section className="results">
       {results.map((book, index) => (
