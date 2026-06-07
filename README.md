@@ -33,3 +33,8 @@ Then open http://localhost:5174/
 - Links to full book info for each result
 
 <img width="1470" height="956" alt="Screenshot 2026-05-31 at 10 39 00 PM" src="https://github.com/user-attachments/assets/1fe6d762-17d3-4b23-a903-8986d46483e9" />
+
+## Planned
+- User authentication
+- favorites feature
+- personalized recommendations
